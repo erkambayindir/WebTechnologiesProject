@@ -63,13 +63,16 @@ Mirasimiz - (Heritage) sayfası
 
 Özgeçmiş (CV)
 
+İlgi alanlarım sayfası, ilgi alanlarım çerçevesinde (film, spor vb) internetten bulduğum 
+ücretsiz bir API servisinden veri alınıp gösterilecek.
+
 İletişim Formu (Contact me) sayfası
 
 İletişim formu tasarımında table bileşenleri, ve html’de input özelliği ve onun bileşenleri kullanılacak
 
 Ayrıca iletişim sayfasında, iletişim formundaki gerekli kontrol işlemleri javaScript kullanarak denetlenecek: 
 
-İletişim formundaki alanları temizlemek için de java Scripti kullanılacak, ve temizlemeden önce, kullanıcıya uyarı mesaj vererek, ikinci bir onay istenecek. Onay vermediği sürece, temizleme işlemi gerçekleşmeyecek
+İletişim formundaki alanları temizlemek için de java Script kullanılacak, ve temizlemeden önce, kullanıcıya uyarı mesaj vererek, ikinci bir onay istenecek. Onay vermediği sürece, temizleme işlemi gerçekleşmeyecek
 
 Submit botununa tıklayınca da, formun içindeki veriler bir login_process.php sayfasına gonderek, formun içindeki bilgileri, o sayfa içinde bir table ve özel tasarım şeklinde gösterilir.
 
