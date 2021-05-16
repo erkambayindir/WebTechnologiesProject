@@ -5,7 +5,7 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<title>Mirasımız</title>
+		<title>Giriş Sayfası</title>
         
 	    <!-- Bootstrap -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen">	
 		  <!-- ek stiller -->
 		<link href="css/style.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/ArticleStyle.css">
+		<link rel="stylesheet" type="text/css" href="css/loginStyle.css">
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	    <script src="js/jquery-2.2.3.min.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -24,11 +24,7 @@
 
 	    <link rel="stylesheet" type="text/css" href="Demo-css.css">
 	    <script src="Demo(Turkish)-Javascript.js" type="text/javascript"></script>
-    
-            
-
-
-    </head>
+	</head>
 
 	<body style="background: url(images/noise.jpg);">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -41,7 +37,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<span class="navbar-brand" style="font-weight: bolder;color: rgb(23, 139, 8);font-family: 'Georgia','Times New Roman';">
+					<span class="navbar-brand" style="font-weight: bolder;color: white;font-family: 'Georgia','Times New Roman';">
 						<strong> Sakarya </strong>
 					</span>
 				</div>
@@ -49,17 +45,15 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="Nav">
 
-                    <ul class="nav navbar-nav">
-                        <li><a href="Index.html">Şehrim</a></li>
-                        <li><a href="about.html">Hakkımda</a></li>
-                        <li><a href="heritage.html">Mirasımız</a></li>
-                        <li><a href="CV.html">Özgeçmiş</a></li>
-                        <li><a href="contactMe.html">İletişim</a></li>
-    
-    
-                    </ul>
-                      
-         		 </ul>
+				<ul class="nav navbar-nav">
+                    <li><a href="Index.html">Şehrim</a></li>
+                    <li><a href="about.html">Hakkımda</a></li>
+                    <li><a href="heritage.html">Mirasımız</a></li>
+                    <li><a href="CV.html">Özgeçmiş</a></li>
+                    <li><a href="contactMe.html">İletişim</a></li>
+
+
+                </ul>
 				  
 					<ul class="nav navbar-nav  navbar-right pad10">
 						<div class="btn-group" >
@@ -72,67 +66,35 @@
 		</nav>
 <!--End Of Head-->
 
-
+</head>
 <body>
 
 
-<div class="container">
-	<h2>Sakaryada yerler </h2><br>
+<?php
 
-    <div class="row">
-        <div class="col-md-5">
-            <p>Açıklamalar</p>
-
-        </div>
-
-        <div class="col-md-7" class="polaroid">
-            <img src="images/Justinianus.jpg" alt="Justinianus" style="width:100%">
-       
-                <p id= "contain" >Justinianus Köprüsü</p>
-          
-
-        </div>
-
-	</div>
-	
-	<div class= "row">
-		<h2>Tarihi</h2><br>
-		
-		<p>Sakarya ile ilgili tarihi bilgiler</p>
-	
-		<p>Sakar-baba ile igili bilgiler ve sakarya nehri</p>
-	</div>
-
-	<div class= "row">
-		<h3>Roma dönemi</h3><br>
-	
-		<p>Roma dönemi ile ilgili bilgiler ve denk geldiğim misyonerler</p>
-	
-	</div>
+    $initUserName = "b081210006@sakarya.edu.tr";
+    $initPsw = 12345;
 
 
-	<div class= "row">
-		<h3>Osmanlı dönemi</h3><br>
-		
-		<p>Osmanlı dönemi ile ilgili bilgiler</p>	
-		<p>Evliya çelebinin kitabında sakarya ve sapanca köyleri</p>	
+    if(empty($_POST["userName"]) || empty($_POST["userPsw"])){
+    die(header("Location: login.php?loginFailed=true&reason=blank"));
+    }
 
-	</div>
+    else if(($_POST["userName"]!=$initUserName) || ($_POST["userPsw"]!=$initPsw)){
+            die(header("Location: login.php?loginFailed=true&reason=username"));
+            
+        }
+        
+    else{
+            echo "Hoşgeldiniz b08120006";
+            echo "<p><a href='login.php'>&lt;Giriş sayfasına dön&gt;</a></p>";
+            echo "<p><a href='Index.html'>&lt;Ana sayfaya dön&gt;</a></p>";
 
-	<div class= "row">
-		<h3>Tarihi eski zamanarda sakaryanın durumu</h3><br>
-		
-		<p>Tarihi bilgiler şehrin eski çağlardaki sakinleri</p>	
-	<p>Bu sakinlerin bir kaçına ait bilgiler</p>
-
-	</div>
+        }
 
 
-</div>
+?>
 
-<br>
-
-    
 </body>
 
 <!--Footer-->
