@@ -16,7 +16,7 @@
     <!-- ek stiller -->
     <link href="css/style.css" rel="stylesheet">
     <!-- ek stiller for CV-->
-	<link href="css/contactStyles.css" rel="stylesheet">
+    <link href="css/PostFormInfo.css" rel="stylesheet">
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
      <script src="js/jquery-2.2.3.min.js"></script>
      <!-- Include all compiled plugins (below), or include individual files as needed -->
